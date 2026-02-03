@@ -13,13 +13,14 @@ export default function TaskDrawer({ open, onClose, task }) {
       title="Görev Detayı"
       open={open}
       onClose={onClose}
-      width={400}
+      size="default" // width yerine size kullan
     >
-      <p><b>Başlık:</b> {task.title}</p>
-      <p className="mt-2"><b>Açıklama:</b> {task.description}</p>
-      <p className="mt-2">
-        <b>Durum:</b> <Tag color={color}>{task.status}</Tag>
-      </p>
+      <div className="space-y-3">
+        <p><strong className="text-gray-700">Başlık:</strong> {task.title}</p>
+        <p><strong className="text-gray-700">Açıklama:</strong> {task.description || "Açıklama yok"}</p>
+        <p><strong className="text-gray-700">Tarih:</strong> {task.date ? new Date(task.date).toLocaleDateString('tr-TR') : "Tarih yok"}</p>
+        <p><strong className="text-gray-700">Durum:</strong> <Tag color={color}>{task.status}</Tag></p>
+      </div>
     </Drawer>
   );
 }

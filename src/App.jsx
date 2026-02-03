@@ -1,26 +1,65 @@
-import { Layout } from "antd";
+import { Layout, ConfigProvider, theme as antdTheme } from "antd";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
+import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider, useTheme } from "./context/ThemeContext"; // ThemeProvider'ı buraya taşı
+import ProtectedRoute from "./pages/ProtectedRoute";
+import AppHeader from "./components/AppHeader";
 
-const { Header, Content } = Layout;
+const { Content } = Layout;
+
+// ThemeWrapper component'i oluştur
+function ThemeWrapper({ children }) {
+  const { theme } = useTheme();
+  
+  return (
+    <ConfigProvider
+      theme={{
+        algorithm:
+          theme === "dark"
+            ? antdTheme.darkAlgorithm
+            : antdTheme.defaultAlgorithm,
+      }}
+    >
+      {children}
+    </ConfigProvider>
+  );
+}
 
 function App() {
   return (
-    <Layout className="min-h-screen bg-gray-100">
-      <Header className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex items-center justify-between">
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-            <span className="bg-linear-to-r from-indigo-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              TaskFlow
-            </span>
-            <span className="ml-2 text-slate-700 font-medium">Görev Akışı</span>
-          </h1>
-        </div>
-      </Header>
-
-      <Content className="p-6 bg-gray-50">
-        <Dashboard />
-      </Content>
-    </Layout>
+    <ThemeProvider>
+      <ThemeWrapper>
+        <AuthProvider>
+          <BrowserRouter>
+            <Layout className="min-h-screen bg-gray-100 dark:bg-slate-900">
+              <AppHeader />
+              <Content className="bg-gray-50 dark:bg-slate-900">
+                <Routes>
+                  <Route path="/login" element={<Login />} />
+                  <Route
+                    path="/dashboard"
+                    element={
+                      <ProtectedRoute>
+                        <Layout className="h-screen bg-gray-100 dark:bg-slate-800">
+                          <Content className="p-6 overflow-auto">
+                            <Dashboard />
+                          </Content>
+                        </Layout>
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route path="*" element={<NotFound />} />
+                  <Route path="/" element={<Navigate to="/login" />} />
+                </Routes>
+              </Content>
+            </Layout>
+          </BrowserRouter>
+        </AuthProvider>
+      </ThemeWrapper>
+    </ThemeProvider>
   );
 }
 

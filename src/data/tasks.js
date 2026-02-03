@@ -17,4 +17,10 @@ export const tasks = [
     description: "Görev yönetim uygulamasını tamamla",
     status: "Tamamlandı",
   },
+  {
+    id: 4,
+    title: "Deploy Et",
+    description: "Projeyi Vercel'a yükle",
+    status: "Bekliyor",
+  },
 ];
