@@ -76,39 +76,43 @@ TaskFlow, ekiplerin görevlerini kolayca yönetebileceği, atama yapabileceği, 
 
 ### Gereksinimler
 
-- Node.js (v18 veya üzeri)
-- MongoDB (yerel veya Atlas)
+- Node.js (v18 veya üzeri)   
+- MongoDB (yerel veya Atlas)   
 
 ### Adım Adım Kurulum
 
 1. **Depoyu klonlayın**
 
-   ```bash
-   git clone https://github.com/sezerartug/taskflow.git
-   cd taskflow
-
+   ```  
+   bash
+      git clone https://github.com/sezerartug/taskflow.git 
+         cd taskflow
    ```
 
 2. **Backend kurulumu**
-   cd backend
-   npm install
+   ```bash
+      cd backend
+      npm install
+   ```
 
-3. **Backend environment değişkenlerini ayarlayın**
-   .env dosyası oluşturun:
+3. **Backend environment değişkenlerini ayarlayın**      
+.env dosyası oluşturun:
 
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/taskflow
+PORT=5000    
+MONGO_URI=mongodb://localhost:27017/taskflow     
 JWT_SECRET=supersecretkey
 
 4. **Frontend kurulumu**
-   cd .. (ana dizine dönün)
-   npm install
-
-5. **Uygulamayı Başlatın**
-   Backend:
-
-cd backend
-npm run dev
+   ```cd .. (ana dizine dönün)
+      npm install
+   ```
+5. **Uygulamayı Başlatın**     
+      
+      Backend:
+```
+cd backend    
+npm run dev    
+```
 
    Frontend (yeni terminal):
 
@@ -117,17 +121,17 @@ npm run dev
 6. **Tarayıcıda açın**
 http://localhost:5173
 
----------------------------------------------
-         Demo Kullanıcılar
-Rol	      E-posta	               Şifre
-Admin	   admin@taskflow.com	      123456
----------------------------------------------
-Not: Daha fazla kullanıcı için Postman ile /api/auth/register endpoint'ine istek atabilirsiniz.
+      ------------------------------------       
+               Demo Kullanıcılar    
+      Rol	      E-posta	               Şifre   
+      Admin	   admin@taskflow.com	      123456      
+      ----------------------------------------------     
+      Not: Daha fazla kullanıcı için Postman ile /api/auth/register endpoint'ine istek atabilirsiniz.
 
 
 
 📁 Proje Yapısı
-
+```
 taskflow/
 ├── backend/                    # Backend klasörü
 │   ├── src/
@@ -153,63 +157,65 @@ taskflow/
 ├── public/                       # Statik dosyalar
 ├── index.html                    # HTML şablonu
 └── package.json                  # Bağımlılıklar
-
+```
 
 📚 API Dokümantasyonu
 
 Auth
 
-POST /api/auth/register - Yeni kullanıcı kaydı
-POST /api/auth/login - Kullanıcı girişi
+POST /api/auth/register - Yeni kullanıcı kaydı    
+POST /api/auth/login - Kullanıcı girişi    
 
 Users
 
-GET /api/users - Tüm kullanıcıları listele
-GET /api/users/:id - Kullanıcı detayı
-PUT /api/users/:id - Kullanıcı güncelle
-PATCH /api/users/:id/avatar - Avatar yükle
+GET /api/users - Tüm kullanıcıları listele   
+GET /api/users/:id - Kullanıcı detayı     
+PUT /api/users/:id - Kullanıcı güncelle      
+PATCH /api/users/:id/avatar - Avatar yükle    
 
 Tasks
 
-GET /api/tasks - Tüm görevleri listele
-GET /api/tasks/:id - Görev detayı
-POST /api/tasks - Yeni görev ekle
-PUT /api/tasks/:id - Görev güncelle
-PATCH /api/tasks/:id/status - Görev durumu güncelle
-DELETE /api/tasks/:id - Görev sil
+GET /api/tasks - Tüm görevleri listele    
+GET /api/tasks/:id - Görev detayı    
+POST /api/tasks - Yeni görev ekle   
+PUT /api/tasks/:id - Görev güncelle     
+PATCH /api/tasks/:id/status - Görev durumu güncelle    
+DELETE /api/tasks/:id - Görev sil    
 
 Comments
 
-GET /api/comments/task/:taskId - Göreve ait yorumlar
-POST /api/comments - Yorum ekle
-PUT /api/comments/:id - Yorum güncelle
-DELETE /api/comments/:id - Yorum sil
+GET /api/comments/task/:taskId - Göreve ait yorumlar    
+POST /api/comments - Yorum ekle     
+PUT /api/comments/:id - Yorum güncelle     
+DELETE /api/comments/:id - Yorum sil     
 
 Notifications
 
-GET /api/notifications - Bildirimleri listele
-GET /api/notifications/unread-count - Okunmamış bildirim sayısı
-PATCH /api/notifications/:id/read - Bildirimi okundu işaretle
-POST /api/notifications/mark-all-read - Tümünü okundu işaretle
+GET /api/notifications - Bildirimleri listele    
+GET /api/notifications/unread-count - Okunmamış bildirim sayısı      
+PATCH /api/notifications/:id/read - Bildirimi okundu işaretle      
+POST /api/notifications/mark-all-read - Tümünü okundu işaretle    
 
 Assignments
 
-GET /api/assignments/task/:taskId - Göreve ait atama geçmişi
-GET /api/assignments - Tüm atama kayıtları
+GET /api/assignments/task/:taskId - Göreve ait atama geçmişi     
+GET /api/assignments - Tüm atama kayıtları    
 
 Activities
 
-GET /api/activities/task/:taskId - Göreve ait aktivite logları
-GET /api/activities - Tüm aktiviteler
-
-🔧 Environment Değişkenleri
-Backend (.env)
-
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/taskflow
-JWT_SECRET=supersecretkey
+GET /api/activities/task/:taskId - Göreve ait aktivite logları    
+GET /api/activities - Tüm aktiviteler     
 
 
+🔧 Environment Değişkenleri   
+
+Backend (.env)   
+
+```
+PORT=5000   
+MONGO_URI=mongodb://localhost:27017/taskflow     
+JWT_SECRET=supersecretkey    
+```
 
 
 📧 İletişim
