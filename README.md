@@ -121,12 +121,18 @@ npm run dev
 6. **Tarayıcıda açın**
 http://localhost:5173
 
-      ------------------------------------       
-               Demo Kullanıcılar    
-      Rol	      E-posta	               Şifre   
-      Admin	   admin@taskflow.com	      123456      
-      ----------------------------------------------     
-      Not: Daha fazla kullanıcı için Postman ile /api/auth/register endpoint'ine istek atabilirsiniz.
+---
+
+### 🔑 Demo Kullanıcı Giriş Bilgileri
+
+| Rol | E-posta | Şifre |
+| :--- | :--- | :--- |
+| **Admin** | `admin@taskflow.com` | `123456` |
+
+> [!TIP]
+> **Not:** Daha fazla kullanıcı oluşturmak için Postman veya benzeri bir araçla `/api/auth/register` uç noktasına (endpoint) istek atabilirsiniz.
+
+---
 
 
 

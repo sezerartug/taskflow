@@ -107,7 +107,7 @@ export default function Login() {
             {/* Demo hesapları - minimalist */}
             <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
               <Text className="text-xs text-gray-500 dark:text-gray-400 block text-center mb-3">
-                Demo hesapları
+                Demo hesabı
               </Text>
               <div className="grid grid-cols-2 gap-3 justify-center items-center">
                 <div className="text-center">
