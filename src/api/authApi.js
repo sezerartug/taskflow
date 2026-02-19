@@ -1,15 +1,6 @@
-import api from "./axios";
+import api from './axios';
 
 export const authApi = {
-  login: async ({ email, password }) => {
-    const res = await api.get("/users", {
-      params: { email, password },
-    });
-
-    if (res.data.length === 0) {
-      throw new Error("E-posta veya şifre hatalı");
-    }
-
-    return res.data[0];
-  },
+  login: (credentials) => api.post('/auth/login', credentials),
+  register: (userData) => api.post('/auth/register', userData),
 };

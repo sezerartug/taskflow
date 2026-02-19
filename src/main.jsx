@@ -1,21 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { App as AntdApp } from "antd";
 import App from "./App";
-import { App as AntdApp } from "antd"; // Antd App component'ini import et
+import { store } from "./store";
 import "antd/dist/reset.css";
 import "./index.css";
 
-// Antd message'ları için wrapper
-function AntdAppWrapper() {
-  return (
-    <AntdApp>
-      <App />
-    </AntdApp>
-  );
-}
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AntdAppWrapper />
+    <Provider store={store}>
+      <AntdApp>
+        <App />
+      </AntdApp>
+    </Provider>
   </React.StrictMode>
 );
