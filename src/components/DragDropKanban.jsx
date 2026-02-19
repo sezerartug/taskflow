@@ -87,7 +87,9 @@ function Column({ column, tasks, onEdit, onDelete, onTaskClick, currentPage }) {
   return (
     <div className="space-y-2">
       {/* Kolon başlığı - Modern gradient arka plan */}
-      <div className="p-3 bg-linear-to-r from-indigo-50 to-blue-50 dark:from-slate-800 dark:to-slate-700 rounded-lg shadow-sm">
+      <div className="p-3 rounded-lg shadow-sm 
+     bg-linear-to-r from-indigo-50 to-blue-50 
+     dark:from-slate-800 dark:to-slate-700">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold">
             <span className="text-gray-800 dark:text-white">{column.title}</span>

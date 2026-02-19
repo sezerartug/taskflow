@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Bu satır v4'e "dark:" gördüğünde git HTML'deki .dark class'ına bak der */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Buraya özel renklerini veya fontlarını ekleyebilirsin */
+}
+
 /* Tailwind v4 için dark mode - basit yol */
 .dark {
   color-scheme: dark;

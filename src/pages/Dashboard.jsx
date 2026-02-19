@@ -455,19 +455,19 @@ export default function Dashboard() {
       </Card>
 
       {/* Drag & Drop Kanban Board */}
-      <Card className="bg-linear-to-br from-white to-gray-50 dark:from-slate-800 dark:to-slate-900 border-none shadow-lg">
-        <DragDropKanban
-          tasks={filteredAndSortedTasks}
-          loading={loading}
-          currentPage={globalPage}
-          onStatusChange={handleStatusChange}
-          onEdit={(task) => {
-            setEditingTask(task);
-            setModalOpen(true);
-          }}
-          onDelete={(task) => setDeleteTaskState(task)}
-          onTaskClick={handleTaskClick}
-        />
+      <Card className="bg-transparent border-none">
+          <DragDropKanban
+            tasks={filteredAndSortedTasks}
+            loading={loading}
+            currentPage={globalPage}
+            onStatusChange={handleStatusChange}
+            onEdit={(task) => {
+              setEditingTask(task);
+              setModalOpen(true);
+            }}
+            onDelete={(task) => setDeleteTaskState(task)}
+            onTaskClick={handleTaskClick}
+          />
       </Card>
 
       {/* Sayfalama */}
