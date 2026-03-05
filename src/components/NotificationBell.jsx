@@ -169,7 +169,7 @@ export default function NotificationBell() {
         overflowCount={99}
         className="cursor-pointer"
       >
-        <BellOutlined className="text-xl text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors" />
+        <BellOutlined className=" text-xl  text-white! hover:text-blue-200! " />
       </Badge>
     </Popover>
   );
